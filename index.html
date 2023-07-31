@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="page-index" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>
+    </title>
+    <link rel="stylesheet" id="fontawesome-css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" type="text/css" media="all">
+    <script src="https://use.typekit.net/ehd5yva.js"></script>
+    <link rel="stylesheet" href="css/main.css?v=1563890663247">
+  </head>
+  <body>
+    <div id="container">
+      <header class="header">
+        <div class="wrap clearfix" id="inner-header">
+          <div class="twocol first">
+            <h1 id="logo"><a href="/">Mellor Coachcraft is a leading manufacturer of specialist passenger carrying vehicles in the UK</a></h1>
+          </div>
+          <div class="twocol tel-holder last text-right">
+            <p><span class="icon icon-phone-1"></span>01706 860610</p>
+          </div>
+        </div>
+      </header>
+      <div style="clear: both;"></div>
+      <div id="content">
+        <div class="b-calculator">
+          <div class="wrap">
+            <div class="b-cal-top">
+              <h2 class="b-cal-top__tit">How much can you save with a Strata?</h2>
+              <p>Compare the total cost of ownership of a Mellor Strata against a large single decker bus</p>
+            </div>
+            <div class="b-calculator__body">
+              <div class="b-calc-line b-calc-line--mil">
+                <div class="b-calc-line__col">
+                  <h3>Mileage:</h3>
+                  <div class="b-range">
+                    <div class="slider ui-slider-range" id="slider-number-mil"></div>
+                    <div class="b-range__numb" id="label-number-mil"></div>
+                    <div class="b-range__bot"><span>0</span><span>100,000</span></div>
+                  </div>
+                </div>
+                <div class="b-calc-line__col">
+                  <div class="beer-slider" id="slider-values-mil" data-beer-label=""><img src="images/svg/mil-before.svg" alt="">
+                    <div class="beer-reveal" id="slider-values-mil-reval" data-beer-label=""><img src="images/svg/mil-after.svg" alt=""></div>
+                  </div>
+                </div>
+              </div>
+              <div class="b-calc-line b-calc-line--fuel">
+                <div class="b-calc-line__col">
+                  <h3>Cost of fuel per litre:</h3>
+                  <div class="b-range">
+                    <div class="slider ui-slider-range" id="slider-number-mil"></div>
+                    <div class="b-range__numb" id="label-number-mil"></div>
+                    <div class="b-range__bot"><span>£1</span><span>£2</span></div>
+                  </div>
+                </div>
+                <div class="b-calc-line__col">
+                  <div class="beer-slider" id="slider-values-fuel" data-beer-label=""><img src="images/svg/fuel-before.svg" alt="">
+                    <div class="beer-reveal" id="slider-values-fuel-reval" data-beer-label=""><img src="images/svg/fuel-after.svg" alt=""></div>
+                  </div>
+                </div>
+              </div>
+              <div class="b-calc-line b-calc-line--vehi">
+                <div class="b-calc-line__col">
+                  <h3>Number of vehicles:</h3>
+                  <div class="b-range">
+                    <div class="slider ui-slider-range" id="slider-number-vehi"></div>
+                    <div class="b-range__numb" id="label-number-vehi"></div>
+                    <div class="b-range__bot"><span>1</span><span>25</span></div>
+                  </div>
+                </div>
+                <div class="b-calc-line__col">
+                  <div class="beer-slider" id="slider-values-vehi" data-beer-label=""><img src="images/svg/vehi-before.svg" alt="">
+                    <div class="beer-reveal" id="slider-values-vehi-reval" data-beer-label=""><img src="images/svg/vehi-after.svg" alt=""></div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="b-calc-row">
+                <div class="b-calc-row__col">
+                  <div class="b-total-sav">
+                    <div class="b-total-sav__line">
+                      <h3>Total saving:</h3>
+                      <div class="b-total-sav__numb">&#163;<span id="total_saving"></span></div>
+                      <p>Based on 12 year vehicle life cycle </p>
+                    </div>
+                    <div class="b-total-sav__line">
+                      <h3>Annual Saving</h3>
+                      <div class="b-total-sav__numb">&#163;<span id="annual_saving"></span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="b-calc-row__col">
+                  <div class="b-total-ow">
+                    <h3>Total Cost of Ownership:</h3>
+                    <div class="b-total-ow__row-mob">
+                      <div class="b-total-ow__row">
+                        <div class="b-total-ow__col"> 
+                          <div class="icon icon--strata">
+                            <svg>
+                              <use xlink:href="images/sprites.svg#strata"></use>
+                            </svg>
+                          </div>Strata:
+                        </div>
+                        <div class="b-total-ow__col"> 
+                          <div class="b-total-ow__numb">&#163;<span id="strata_total_cost_saving"></span></div>
+                        </div>
+                      </div>
+                      <div class="b-total-ow__row">
+                        <div class="b-total-ow__col"> 
+                          <div class="icon icon--large">
+                            <svg>
+                              <use xlink:href="images/sprites.svg#large"></use>
+                            </svg>
+                          </div>Large single deck bus:
+                        </div>
+                        <div class="b-total-ow__col">
+                          <div class="b-total-ow__numb">&#163;<span id="largebus_total_cost_saving"></span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <input id="number-mil" type="hidden" name="number-mil" value="">
+              <input id="number-vehi" type="hidden" name="number-vehi" value="">
+              <div class="b-calc-row">
+                <div class="b-calc-row__col">
+                  <div class="b-calc-txt">
+                    <div class="b-calc-txt__line">Contact us today on <a href="tel:01706 860610">01706 860610 </a>to book your test drive and start your journey to a lower total cost of ownership!
+                      <div class="icon icon--phone">
+                        <svg>
+                          <use xlink:href="images/sprites.svg#phone"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="b-calc-txt__line">To find out more about the Strata and to <a href="#">download the brochure</a>, just <a href="#">complete the form.</a>
+                      <div class="icon icon--download">
+                        <svg>
+                          <use xlink:href="images/sprites.svg#download"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <p>All figures are based on 12 years of operation and include common maintenance and servicing cost. Calculations are based on fuel costs increasing 2.5% per year.	</p>
+                </div>
+                <div class="b-calc-row__col">
+                  <div class="b-cal-form">
+                    <form class="js-cm-form" id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1A622A59A49A46B5895527D84915F5058F5F89B8CFA6F50F722CF441F9B6DCABB083AC2CF305DE89E910B26D915E4A2AA6">
+                      <p>
+                        <input class="b-cal-form__input" id="fieldName" name="cm-name" type="text" placeholder="Name">
+                      </p>
+                      <p>
+                        <input class="js-cm-email-input b-cal-form__input" id="fieldEmail" name="cm-yddylki-yddylki" type="email" required placeholder="Email">
+                      </p>
+                      <p>
+                        <input class="b-cal-form__input" id="fieldwurlrl" name="cm-f-wurlrl" type="text" placeholder="Phone number">
+                      </p>
+                      <p>
+                        <input class="b-cal-form__input" id="fieldwurlrr" name="cm-f-wurlrr" type="text" placeholder="Company">
+                      </p>
+                      <p>
+                        <label class="b-lab-checkbox js-checked" for="cm-privacy-consent">
+                          <input class="js-input" id="cm-privacy-consent" name="cm-privacy-consent" required type="checkbox">I agree to be emailed
+                        </label>
+                        <input class="b-cal-form__input" id="cm-privacy-consent-hidden" name="cm-privacy-consent-hidden" type="hidden" value="true">
+                      </p>
+                      <div class="b-cal-form__bot">
+                        <button class="js-cm-submit-button b-cal-form__btn" type="submit">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="footer-top default-bkg-2 bands">
+            <div class="wrap clearfix">
+              <div class="sixcol first">
+                <div class="sixcol first">
+                  <h4>Address</h4>
+                  <p><strong>Mellor Coachcraft</strong><br>Miall Street<br>Rochdale<br>OL11 1HY</p>
+                  <p><span style="color: #ffb10b;">E:&nbsp;<a href="mailto:info@mellor-coachcraft.co.uk">info@mellor-coachcraft.co.uk</a></span></p>
+                </div>
+                <div class="sixcol last">
+                  <h4>Contact Us</h4>
+                  <p><span>Tel: </span>01706 860610<br><span>Fax: </span>01706 860402<br><span class="email"><a href="mailto:info@mellor-coachcraft.co.uk">Email Sales</a></span></p>
+                </div>
+              </div>
+              <div class="sixcol last vat-holder">
+                <p>Copyright Mellor Coachcraft 2018 | All Rights Reserved<br>Mellor Coachcraft, a division of Woodall Nicholson Limited,<br>a registered company in England and Wales, registration no : 4747125</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-middle default-bkg-4 half-bands">
+            <div class="wrap clearfix">
+              <div class="eightcol first">
+                <div class="twelvecol first footer-nav-holder">
+                  <nav>
+                    <ul class="nav footer-nav clearfix">
+                      <li><a href="exhibitions-events/">Exhibitions and Events</a></li>
+                      <li><a href="our-history/">About</a></li>
+                      <li><a href="exporting/">Exporting</a></li>
+                      <li><a href="careers/">Careers</a></li>
+                      <li><a href="contact/">Contact</a></li>
+                      <li><a href="privacy-policy/">Privacy Policy</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="twelvecol first footer-company-nav-holder">
+                  <nav>
+                    <ul class="nav footer-nav clearfix">
+                      <li><a title="nolink" href="#">Group Companies</a></li>
+                      <li><a target="_blank" rel="noopener noreferrer" href="http://www.woodall-nicholson.co.uk/">Woodall Nicholson</a></li>
+                      <li><a target="_blank" rel="noopener noreferrer" href="http://www.cmspecialistvehicles.co.uk/">CM Specialist Vehicles</a></li>
+                      <li><a target="_blank" rel="noopener noreferrer" href="http://www.coleman-milne.co.uk/">Coleman Milne</a></li>
+                      <li><a href="//www.mellor-coachcraft.com/">Mellor International</a></li>
+                      <li><a href="//binz-cars.com/">Binz Cars</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <div class="fourcol footer-social align-right last"><span class="mobile-li first-li last"><a class="fa fa-twitter circle" href="//twitter.com/mellorcc" target="_blank"></a><a class="fa fa-linkedin circle" href="//www.linkedin.com/company/mellor-coachcraft" target="_blank"></a><a class="fa fa-facebook circle" href="//www.facebook.com/pages/Mellor-Coachcraft/108597602509785" target="_blank"></a><a class="fa fa-google-plus circle" href="//plus.google.com/106886903480660753766/about" target="_blank"></a></span><span class="mobile-li second-li first"><img class="mellor-logo" src="images/svg/logo-footer.svg" width="102" height="30" alt="Mellor Coachcraft"></span></div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="js/vendor.js?v=1563890663247"></script>
+    <script src="js/main.js?v=1563890663247"></script>
+    <script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
+  </body>
+</html>
